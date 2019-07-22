@@ -6,10 +6,12 @@
     "ng": "ng",
     "serve": "node server",
     "start": "concurrently -c \"yellow.bold,green.bold\" -n \"SERVER,BUILD\" \"nodemon server\" \"ng build --watch\"",
+    "start-ts": "concurrently -c \"pink.bol,green.bold\" -n \"SERVER,BUILD\" \"ts-node-dev --respawn --transpileOnly server-ts/index.ts\"",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "tsc": "tsc"
   },
   "private": true,
   "dependencies": {
@@ -77,6 +79,7 @@
     "karma-jasmine-html-reporter": "1.1.0",
     "protractor": "^5.4.1",
     "ts-node": "~6.1.0",
+    "ts-node-dev": "^1.0.0-pre.40",
     "tslint": "~5.10.0",
     "typescript": "~2.9.2"
   }
