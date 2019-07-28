@@ -1,11 +1,15 @@
 header {
     width: 100%;
     .logo {
-      background-image: url('../../assets/logo.png');
-      width: 50px;
-      height: 50px;
-      background-size: contain;
-      background-repeat: no-repeat;
+      // background-image: url('../../assets/logo.png');
+      // width: 50px;
+      // height: 50px;
+      // background-size: contain;
+      // background-repeat: no-repeat;
+      i {
+        padding: 0 4px;
+      }
+      color: white;
     }
     .example-spacer {
       flex: 1 1 auto;
