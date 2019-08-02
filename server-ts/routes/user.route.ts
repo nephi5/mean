@@ -1,10 +1,8 @@
 import * as express from 'express';
 import * as passport from 'passport';
 import * as asyncHandler from 'express-async-handler';
-// const express = require('express');
-// const passport = require('passport');
-// const asyncHandler = require('express-async-handler');
-const userCtrl = require('../controllers/user.controller');
+
+import { ctrl as userCtrl } from '../controllers/user.controller';
 
 export const router = express.Router();
 

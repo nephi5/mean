@@ -1,6 +1,7 @@
 import * as express from 'express';
 import { router as authRoutes } from './auth.route';
 import { router as userRoutes } from './user.route';
+import { router as imgRoutes } from './img.route';
 // const userRoutes = require('./user.route');
 // const authRoutes = require('./auth.route');
 
@@ -20,3 +21,4 @@ router.get('/another-test', (req, res) => {
 
 router.use('/auth', authRoutes);
 router.use('/user', userRoutes);
+router.use('/img', imgRoutes);

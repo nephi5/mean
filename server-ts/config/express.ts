@@ -16,21 +16,6 @@ import { join as pathJoin } from 'path';
 import { config } from './config';
 import { passportConfig } from './passport';
 
-// const express = require('express');
-// const httpError = require('http-errors');
-// const logger = require('morgan');
-// const bodyParser = require('body-parser');
-// const cookieParser = require('cookie-parser');
-// const compress = require('compression');
-// const methodOverride = require('method-override');
-// const cors = require('cors');
-// const helmet = require('helmet');
-// const swaggerUi = require('swagger-ui-express');
-// const swaggerDocument = require('./swagger.json');
-// const routes = require('../routes/index.route');
-// const config = require('./config');
-// const passport = require('./passport');
-
 export const app = express();
 
 if (config.env === 'development') {
@@ -46,12 +31,12 @@ if (config.frontend === 'react') {
 }
 
 //
+app.use(express.static(pathJoin(__dirname, '../../received/')));
 app.use(express.static(pathJoin(__dirname, distDir)));
 app.use(/^((?!(api)).)*/, (req, res) => {
   res.sendFile(pathJoin(__dirname, distDir + '/index.html'));
 });
 
-console.log(distDir);
 // React server
 app.use(
   express.static(
