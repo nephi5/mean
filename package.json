@@ -5,6 +5,8 @@
   "scripts": {
     "ng": "ng",
     "serve": "node server",
+    "frontend": "ng serve --proxy-config=proxy-config.json",
+    "backend": "ts-node-dev --respawn --transpileOnly --project tsconfig-server.json server-ts/index.ts",
     "start": "concurrently -c \"yellow.bold,green.bold\" -n \"SERVER,BUILD\" \"nodemon server\" \"ng build --watch\"",
     "start-ts": "concurrently -c \"blue.bold,green.bold\" -n \"SERVER,BUILD\" \"ts-node-dev --respawn --transpileOnly --project tsconfig-server.json server-ts/index.ts\" \"ng build --watch\"",
     "build": "ng build --prod",

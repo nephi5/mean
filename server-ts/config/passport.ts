@@ -2,13 +2,12 @@ import { config } from './config';
 import * as passport from 'passport';
 import { Strategy as LocalStrategy } from 'passport-local';
 import * as StrategyJWT from 'passport-jwt';
+import { userModel as User } from '../models/user.model';
 
 const JwtStrategy = StrategyJWT.Strategy;
 const ExtractJwt = StrategyJWT.ExtractJwt;
 
 const bcrypt = require('bcrypt');
-
-const User = require('../models/user.model');
 
 const localLogin = new LocalStrategy(
   {

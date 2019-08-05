@@ -1,10 +1,6 @@
 import * as bcrypt from 'bcrypt';
 import * as Joi from '@hapi/joi';
-import * as User from '../models/user.model';
-
-// const bcrypt = require('bcrypt');
-// const Joi = require('joi');
-// const User = require('../models/user.model');
+import { userModel as User } from '../models/user.model';
 
 const userSchema = Joi.object({
   fullname: Joi.string().required(),

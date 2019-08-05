@@ -16,4 +16,16 @@ export class HomeComponent implements OnInit {
       console.log(resp);
     });
   }
+
+  public getAllProjects() {
+    this.http.get('api/project/all').subscribe(resp => {
+      console.log(resp);
+    });
+  }
+
+  public getById() {
+    this.http.get('api/project?id=23223123323').subscribe(resp => {
+      console.log(resp);
+    });
+  }
 }
